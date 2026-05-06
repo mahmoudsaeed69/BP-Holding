@@ -40,6 +40,8 @@
     "noUncheckedSideEffectImports": true
   },
   "include": [
-    "src"
+    "src",
+    "db",
+    "api"
   ]
 }
