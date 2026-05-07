@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
   "dev": "vite",
-  "build": "vite build && esbuild api/boot.ts --platform=node --bundle --format=esm --outdir=dist --target=node16 --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);\"",
-  "preview": "vite preview",
+"build": "vite build && esbuild api/boot.ts --platform=node --bundle --format=esm --outdir=dist --target=node16 --bundle --external:@db/* --external:@contracts/* --banner:js=\"import { createRequire } from 'module';const require = createRequire(import.meta.url);\""  "preview": "vite preview",
   "start": "NODE_ENV=production node dist/boot.js",
   "check": "tsc -b",
   "format": "prettier --write .",
